@@ -1,5 +1,6 @@
 #!/bin/sh
-sudo pkg update && \
+sudo hbsd-update &&
+    sudo pkg update && \
     sudo pkg install -y curl &&
     su vagrant -c 'curl https://sh.rustup.rs -sSf | sh -s -- -y' &&
     sudo pkg delete -y curl &&
